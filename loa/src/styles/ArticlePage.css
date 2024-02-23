@@ -1,0 +1,61 @@
+/* ArticlePage.css */
+
+.articles-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.article-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.article-form {
+    margin-bottom: 20px;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.input-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.input-container input[type="text"]:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #007bff; /* Change border color on focus */
+}
+
+.article-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.article-form button:hover {
+    background-color: #0056b3;
+}
+.page-link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-decoration: none;
+    padding: 8px 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.page-link:hover {
+    background-color: #0056b3;
+}
