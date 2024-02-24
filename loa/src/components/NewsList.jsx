@@ -1,11 +1,11 @@
-// NewsList.js
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchInitialNews, fetchMoreNews } from '../actions/newsAction';
 import '../styles/NewsList.css';
 
 function NewsList() {
     const news = useSelector(state => state.news);
+    const [currentPage, setCurrentPage] = useState(1); // Локальний стейт для зберігання номера поточної сторінки
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -13,7 +13,8 @@ function NewsList() {
     }, [dispatch]);
 
     const handleFetchMore = () => {
-        dispatch(fetchMoreNews());
+        dispatch(fetchMoreNews(currentPage + 1)); // Передача номера наступної сторінки
+        setCurrentPage(currentPage + 1); // Оновлення номера поточної сторінки
     };
 
     return (
